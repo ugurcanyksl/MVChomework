@@ -1,0 +1,12 @@
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\CORE.dll.config
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\CORE.dll
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\CORE.pdb
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\EntityFramework.dll
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\EntityFramework.xml
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\obj\Debug\CORE.csprojAssemblyReference.cache
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\obj\Debug\CORE.csproj.CoreCompileInputs.cache
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\obj\Debug\CORE.csproj.CopyComplete
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\obj\Debug\CORE.dll
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\CORE\obj\Debug\CORE.pdb

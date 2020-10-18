@@ -1,0 +1,12 @@
+﻿@model List<MODEL.Entities.Category>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<ul>
+    @foreach (MODEL.Entities.Category category in Model)
+    {
+        <li>@category.CategoryName</li>
+    }
+</ul>

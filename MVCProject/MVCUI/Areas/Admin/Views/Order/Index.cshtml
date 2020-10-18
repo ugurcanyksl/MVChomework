@@ -1,0 +1,54 @@
+﻿@model List<Order>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    TempData["Title"] = "Siparişler";
+
+}
+
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            @Html.ActionLink("Sipariş Ekle", "AddOrder", "Order", null, new { @class = "btn btn-info float-right" })
+        </div>
+        <div class="panel-heading">
+            @if (TempData["Message"] != null)
+            {
+                <span class="alert-dismissible alert-success">@TempData["Message"]</span>
+            }
+            else
+            {
+                <h2></h2>
+            }
+
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Sipariş Durum</th>
+                        <th>Sipariş Onayı</th>
+                        <th>Sipariş Tarih</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Order o in Model)
+                    {
+                        <tr>
+                            <td>@o.Status</td>
+                            <td>@o.Confirmed</td>
+                            <td>@o.OrderDate</td>
+                            <td>
+                                @Html.ActionLink("Güncelle", "UpdateOrder", new { id = o.ID }, new { @class = "badge bg-warning" })
+                                @Html.ActionLink("Sil", "DeleteOrder", new { id = o.ID }, new { @class = "badge bg-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

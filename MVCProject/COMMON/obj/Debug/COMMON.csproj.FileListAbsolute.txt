@@ -1,0 +1,6 @@
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\COMMON\bin\Debug\COMMON.dll
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\COMMON\bin\Debug\COMMON.pdb
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\COMMON\obj\Debug\COMMON.csprojAssemblyReference.cache
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\COMMON\obj\Debug\COMMON.csproj.CoreCompileInputs.cache
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\COMMON\obj\Debug\COMMON.dll
+C:\Users\90531\Desktop\MVCODEVPROJESI\YMS3140MVCProject\MVCProject\COMMON\obj\Debug\COMMON.pdb

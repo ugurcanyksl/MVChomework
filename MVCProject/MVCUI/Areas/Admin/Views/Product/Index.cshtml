@@ -1,0 +1,58 @@
+﻿@model List<Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    TempData["Title"] = "Ürünler";
+}
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            @Html.ActionLink("Ürün Ekle", "AddProduct", "Product", null, new { @class = "btn btn-info float-right" })
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Görsel</th>
+                        <th>Ürün Adı</th>
+                        <th>Ürün Fiyat</th>
+                        <th>Stok Adet</th>
+                        <th>Alt Kategori</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Product p in Model)
+                    {
+                    <tr>
+
+                            <td>
+                                <img src="@p.ImagePath" width="32" height="32" />
+                            </td>
+
+                        
+                            @*<td>
+                                <img src="~/Content/images/user-images/gomlek.jpg" width="32" height="32" />
+                            </td>*@
+                             
+
+                        <td>@p.ProductName</td>
+                        <td>@p.UnitPrice</td>
+                        <td>@p.UnitsInStock</td>
+                        <td>@p.SubCategoryId</td>
+                        <td>
+                            @Html.ActionLink("Güncelle", "UpdateProduct", new { id = p.ID }, new { @class = "badge bg-warning" })
+                            @Html.ActionLink("Sil", "DeleteProduct", new { id = p.ID }, new { @class = "badge bg-danger" })
+                        </td>
+
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

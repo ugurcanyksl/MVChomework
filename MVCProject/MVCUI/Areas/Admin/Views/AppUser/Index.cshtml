@@ -1,0 +1,91 @@
+﻿@model List<AppUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    TempData["Title"] = "Kullanıcılar";
+}
+
+<div class="col-lg-12">
+    <div class="card">
+
+        <div class="card-header">
+            @Html.ActionLink("Kullanıcı Ekle", "AddAppUser", "AppUser", null, new { @class = "btn btn-info float-right" })
+        </div>
+
+        <div class="panel-heading">
+            @if (TempData["Message"] != null)
+            {
+                <span class="alert-dismissible alert-success">@TempData["Message"]</span>
+            }
+            else
+            {
+                <h2></h2>
+            }
+
+        </div>
+
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Profil Foto</th>
+                        <th>Kullanıcı Adı</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Email</th>
+                        <th>Doğum Tarihi</th>
+                        <th>Adres</th>
+                        <th>Telefon</th>
+                        <th>Cinsiyet</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (AppUser user in Model)
+                    {
+                        <tr>
+                            @if (user.ImagePath != null)
+                            {
+                                <td>
+                                    <img src="@user.ImagePath" width="32" height="32" />
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <img src="~/Content/images/user-images/placeholder.png" width="32" height="32" />
+                                </td>
+                            }
+
+                            <td>@user.UserName</td>
+                            <td>@user.Name</td>
+                            <td>@user.LastName</td>
+                            <td>@user.Email</td>
+                            <td>@user.BirthDate.ToShortDateString()</td>
+                            <td>@user.Address</td>
+                            <td>@user.PhoneNumber</td>
+                            <td>@user.Gender</td>
+                            <td>
+                                @Html.ActionLink("Güncelle", "UpdateAppUser", new { id = user.ID }, new { @class = "badge bg-warning" })
+                                @Html.ActionLink("Sil", "DeleteAppUser", new { id = user.ID }, new { @class = "badge bg-danger" })
+                            </td>
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#appUserTable').DataTable();
+        });
+    </script>
+}
